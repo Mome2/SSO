@@ -3,7 +3,6 @@
 namespace App\Interfaces;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 
 interface resourcesInterface
 {
@@ -14,8 +13,8 @@ interface resourcesInterface
   function delete(int $id): bool;
   function getOne(int $id): Model;
   function getHiddenOne(int $id): Model;
-  function getWithQuery(string $query): Collection;
-  function getHiddenWithQuery(string $query): Collection;
-  function getAll(): Collection;
-  function getAllHidden(): Collection;
+  function getWithQuery(string $query): Model;
+  function getHiddenWithQuery(string $query): Model;
+  function getAll(): Model;
+  function getAllHidden(): Model;
 }
