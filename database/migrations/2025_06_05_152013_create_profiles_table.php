@@ -25,7 +25,7 @@ return new class extends Migration
       $table->string('state')->nullable();
       $table->string('country')->nullable();
       $table->date('dob')->nullable();
-      $table->enum('gender', ['male', 'female'])->nullable();
+      $table->string('gender', 5)->nullable();
       $table->string('timezone')->default('Africa/Cairo');
       $table->string('local', 2)->default('en');
       $table->boolean('2fa')->default(0);
