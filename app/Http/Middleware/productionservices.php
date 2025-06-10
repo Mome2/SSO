@@ -5,9 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Illuminate\Support\Facades\Auth;
 
-class activeuser
+class productionservices
 {
   /**
    * Handle an incoming request.
@@ -16,9 +15,6 @@ class activeuser
    */
   public function handle(Request $request, Closure $next): Response
   {
-    if (!$request->user()->active()) {
-      return redirect()->back()->withErrors('activation', trans('not.active'));
-    }
     return $next($request);
   }
 }

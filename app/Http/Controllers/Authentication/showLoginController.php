@@ -10,7 +10,7 @@ class showLoginController extends Controller
   /**
    * Handle the incoming request.
    */
-  public function paly(ClientLoginRequest $request, $handshaketoken, $seesionid, $callback)
+  public function __invoke(ClientLoginRequest $request)
   {
     return 'login';
   }

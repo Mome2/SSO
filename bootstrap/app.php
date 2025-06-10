@@ -13,7 +13,8 @@ return Application::configure(basePath: dirname(__DIR__))
   )
   ->withMiddleware(function (Middleware $middleware) {
     $middleware->alias([
-      'activeuser' => \App\Http\Middleware\activeuser::class,
+      'active.user' => \App\Http\Middleware\activeuser::class,
+      'production.service' => \App\Http\Middleware\productionservices::class,
     ]);
   })
   ->withExceptions(function (Exceptions $exceptions) {

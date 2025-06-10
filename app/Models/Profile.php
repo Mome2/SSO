@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\Gender;
 use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
@@ -48,10 +49,12 @@ class Profile extends Model
   protected function casts(): array
   {
     return [
-      'password_changed' => 'datetime: DD-MM-YYYY H:i:s',
-      'created_at' => 'datetime: DD-MM-YYYY H:i:s',
-      'updated_at' => 'datetime: DD-MM-YYYY H:i:s',
-      'last_login' => 'datetime: DD-MM-YYYY H:i:s',
+      'gender' => Gender::class,
+      'dob' => 'date: DD-MM-YYYY',
+      'last_login' => 'datetime: DD-MM-YYYY h:i:s',
+      'created_at' => 'datetime: DD-MM-YYYY h:i:s',
+      'updated_at' => 'datetime: DD-MM-YYYY h:i:s',
+      'password_changed' => 'datetime: DD-MM-YYYY h:i:s',
     ];
   }
   public function user()
