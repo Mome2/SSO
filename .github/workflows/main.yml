@@ -37,4 +37,4 @@ jobs:
           server: ftp.eb2a.com
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          server-dir: /htdocs
+          server-dir: /htdocs/
